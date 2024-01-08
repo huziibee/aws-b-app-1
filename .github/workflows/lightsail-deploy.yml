@@ -1,0 +1,29 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches:
+      - main  # Set this to your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Deploy to Lightsail
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.LIGHTSAIL_HOST }}
+        username: ${{ secrets.LIGHTSAIL_USERNAME }}
+        key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+        port: 22  # Default SSH port; change it if yours is different
+        script: |
+          cd /htdocs
+          git pull origin main
+          npm install --production
+          pm2 restart server.js
