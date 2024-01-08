@@ -5,7 +5,7 @@ const path = require('path')
 const history = require('connect-history-api-fallback');
 
 const app = express();
-const port = 3008;
+const port = 3009;
 app.use(express.static(path.resolve(__dirname, './AWS-APP'), { maxAge : '1y', etag: false}));
 app.use(history());
 app.use(express.json());
