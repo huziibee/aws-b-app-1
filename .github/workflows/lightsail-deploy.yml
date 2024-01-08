@@ -27,4 +27,6 @@ jobs:
           sudo rm -r *
           sudo git clone https://github.com/huziibee/aws-b-app-1.git
           cd aws-b-app-1
-          node server.js
+          sudo npm install
+          sudo npm install pm2 -g
+          pm2 restart server.js
