@@ -1,0 +1,130 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#expense-name, #expense-amount {
+    width: 95%;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.horizontal_display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#username{
+    color: #5c94de;
+    
+}
+
+#logout-btn {
+    width: 5rem;
+    margin: 0 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: #5c94de;
+}
+
+.dashboard-header {
+    padding-top: 50px; 
+}
+.formbtn {
+    width: 100%;
+    margin: 20px 0px 5px 0;
+    padding: 10px;
+    border: none;
+    background-color: #5c85d6;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+button:hover {
+    background-color: #4d70b8;
+}
+
+.budget-display, .expense-tracker {
+    margin: 1rem;
+    margin-top: 3rem;
+    
+    padding: 1rem;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+}
+
+.dashboard-header{
+    margin-right: 10rem;
+    width: 25rem;
+}
+
+.dashboard-header h2{
+    text-align: center;
+}
+
+
+.navigation-header{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#budget-items{
+    margin-top: 1.5rem;
+    display: none;
+    background-color: #f6f7f8;
+    padding: 1rem;
+    padding-top: 0;
+    border-radius: 20px 0 0 20px;
+    overflow-y: auto;
+    height: 18rem;
+}
+s
+#budget-items::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+#budget-items::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 20px;
+}
+
+#budget-items::-webkit-scrollbar-thumb {
+    background-color: #5c94de; 
+    border-radius: 20px;
+}
+
+#budget-amount, #amount-spent, #remaining-budget {
+    font-weight: bold;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}
