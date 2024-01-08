@@ -24,6 +24,7 @@ jobs:
         port: 22  # Default SSH port; change it if yours is different
         script: |
           cd /opt/bitnami/apache2/htdocs
-          git pull origin main
-          npm install --production
+          sudo rm -r *
+          sudo git clone https://github.com/huziibee/aws-b-app-1.git
+          npm install
           pm2 restart server.js
