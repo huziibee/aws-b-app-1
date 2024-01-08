@@ -23,7 +23,7 @@ jobs:
         key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
         port: 22  # Default SSH port; change it if yours is different
         script: |
-          cd /htdocs
+          cd /var/www/html/htdocs
           git pull origin main
           npm install --production
           pm2 restart server.js
