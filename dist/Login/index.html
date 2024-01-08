@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <form id="login-form">
+        <h2>Login</h2>
+        <input name="username" id="login-username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          id="login-password"
+          placeholder="Password"
+          required
+        />
+        <button class="formbtn" type="submit">Login</button>
+        <p>
+          Don't have an account?
+          <a class="signup-atag" href="../Register/signup.html"> <b> Sign up! </b> </a>
+        </p>
+      </form>
+    </div>
+    <script type="text/javascript" src="../utils/amazon-cognito-identity.min.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
