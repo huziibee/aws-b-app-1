@@ -6,7 +6,7 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href === '' ) {
+    if (window.location.href !== '../Login/index.html' ) {
         window.location.href = '../Login/index.html';
     }
 })
