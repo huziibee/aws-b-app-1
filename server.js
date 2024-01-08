@@ -4,6 +4,7 @@ const cors = require('cors');
 const path = require('path')
 const history = require('connect-history-api-fallback');
 
+
 const app = express();
 const port = 3009;
 app.use(express.static(path.resolve(__dirname, './AWS-APP'), { maxAge : '1y', etag: false}));
