@@ -26,5 +26,4 @@ jobs:
           cd /opt/bitnami/apache2/htdocs
           sudo rm -r *
           sudo git clone https://github.com/huziibee/aws-b-app-1.git
-          npm install
-          pm2 restart server.js
+          node server.js
