@@ -27,4 +27,4 @@ jobs:
           sudo rm -r *
           sudo git clone https://github.com/huziibee/aws-b-app-1.git
           cd aws-b-app-1
-          pm start server.js
+          node server.js
