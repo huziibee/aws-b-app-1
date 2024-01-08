@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     if (!sessionStorage.getItem('username')) {
-        window.location.href = '../Login/index.html';
+        window.location.href = '../index.html';
     }
 
 

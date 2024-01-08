@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './AWS-APP/Login/index.html'));
+  res.sendFile(path.join(__dirname, './AWS-APP/index.html'));
 });
 
 app.listen( process.env.PORT || port, () => {

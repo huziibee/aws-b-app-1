@@ -5,11 +5,7 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({
     ClientId: '23hinerifjsno4tbq6bbrcencc', // Generated in the Cognito User Pool settings
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href !== '../Login/index.html' ) {
-        window.location.href = '../Login/index.html';
-    }
-})
+
 
 function loginUser(name, password) {
     const authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails({
