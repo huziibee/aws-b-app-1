@@ -69,13 +69,16 @@ async function sendTransactions(transactions) {
         });
 
         if (!response.ok) {
+            alert('There was an error sending the email');
             throw new Error('Network response was not ok');
         }
 
         const data = await response.json();
         console.log(data);
+        alert('Email sent successfully');
 
     } catch (error) {
+        alert('There was an error sending the email');
         console.error('There was an error sending the transactions:', error);
     }
 }
