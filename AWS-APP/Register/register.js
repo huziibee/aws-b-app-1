@@ -8,7 +8,7 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({
 
 
 
-function registerUser(name,email,phone_number, password) {
+function registerUser(name, email, phone_number, password) {
     const attributeList = [
         new AmazonCognitoIdentity.CognitoUserAttribute({
             Name: 'email',
@@ -16,7 +16,7 @@ function registerUser(name,email,phone_number, password) {
         }),
         new AmazonCognitoIdentity.CognitoUserAttribute({
             Name: 'phone_number',
-            Value: phone_number, 
+            Value: phone_number,
         }),
     ];
 
@@ -34,13 +34,13 @@ function registerUser(name,email,phone_number, password) {
 }
 
 
-document.getElementById('signup-form').addEventListener('submit', function(event){
+document.getElementById('signup-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
     const name = document.getElementById('signup-name').value;
     const phone_number = document.getElementById('signup-phone-number').value;
-    registerUser(name,email, phone_number, password);
+    registerUser(name, email, phone_number, password);
     // window.location.href = 'login.html';
 });
 

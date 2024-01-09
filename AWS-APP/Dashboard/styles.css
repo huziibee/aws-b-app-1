@@ -116,7 +116,25 @@ s
     background-color: #5c94de; 
     border-radius: 20px;
 }
+#email-btn {
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+  }
 
+#email-btn:hover {
+    text-decoration: underline;
+    background: none;
+}
+
+#email-btn-container{
+    display: none;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
 #budget-amount, #amount-spent, #remaining-budget {
     font-weight: bold;
 }

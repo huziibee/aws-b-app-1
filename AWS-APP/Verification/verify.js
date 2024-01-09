@@ -4,13 +4,13 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({
     ClientId: '23hinerifjsno4tbq6bbrcencc', // Generated in the Cognito User Pool settings
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (!sessionStorage.getItem('username')) {
         window.location.href = '../index.html';
     }
 })
 
-document.getElementById('otp-form').addEventListener('submit', function(event){
+document.getElementById('otp-form').addEventListener('submit', function (event) {
     event.preventDefault();
     const otpCode = document.getElementById('otp-code').value;
     verifyUser(otpCode);
@@ -34,7 +34,7 @@ function verifyUser(otpCode) {
         Pool: userPool,
     });
 
-    user.confirmRegistration(otpCode, true, function(err, result) {
+    user.confirmRegistration(otpCode, true, function (err, result) {
         if (err) {
             console.error(err);
             return;

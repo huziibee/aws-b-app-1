@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Signup</title>
-<link rel="stylesheet" href="../styles.css">
-</head>
-<body>
+    <title>Signup</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
     <div class="signup-container">
-        <form id="signup-form">
-            <h2>Sign Up</h2>
-            <div>
-                <input type="text" id="signup-name" placeholder="Full Name" required>
-                <input type="email" id="signup-email" placeholder="Email" required>
-                <input type="text" id="signup-phone-number" placeholder="Mobile number (eg. +27834620294)" required>
-                <input type="password" id="signup-password" placeholder="Password" required>
-            </div>
+      <form id="signup-form">
+        <h2>Sign Up</h2>
+        <div>
+          <input
+            type="text"
+            id="signup-name"
+            placeholder="Full Name"
+            required
+          />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="text"
+            id="signup-phone-number"
+            placeholder="Mobile number (eg. +27834620294)"
+            required
+          />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            required
+          />
+        </div>
 
-            <button class="formbtn" type="submit">Sign Up</button>
-            <p>
-                Already have an account?
-                <a class="signup-atag" href="../index.html"> <b> Sign in! </b> </a>
-              </p>
-        </form>
+        <button class="formbtn" type="submit">Sign Up</button>
+        <p>
+          Already have an account?
+          <a class="signup-atag" href="../index.html"> <b> Sign in! </b> </a>
+        </p>
+      </form>
     </div>
-    <script type="text/javascript" src="../utils/amazon-cognito-identity.min.js"></script>
-<script src="./register.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="../utils/amazon-cognito-identity.min.js"
+    ></script>
+    <script src="./register.js"></script>
+  </body>
 </html>

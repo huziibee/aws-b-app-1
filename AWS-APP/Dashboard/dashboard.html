@@ -10,21 +10,23 @@
   </head>
   <body>
     <header class="navigation-header">
-        <h1 class="welcome-message">Welcome back, <span id="username"></span></h1>
-        <nav class="navbar">
-            <a href="dashboard.html">Home</a>
-            <a href="../viewExpenses/view-expenses.html">View Expenses</a>
-            <button class="formbtn" id="logout-btn">Logout</button>
-        </nav>
+      <h1 class="welcome-message">Welcome back, <span id="username"></span></h1>
+      <nav class="navbar">
+        <button class="formbtn" onclick="logout()" id="logout-btn">
+          Logout
+        </button>
+      </nav>
     </header>
-    
+
     <div class="horizontal_display">
       <div class="dashboard-header">
         <h2>My Weekly Budget App</h2>
         <button class="formbtn" id="set-budget-btn">Set Weekly Budget</button>
+        <div id="email-btn-container">
+          <button id="email-btn">View transactions</button>
+        </div>
 
-        <ul id="budget-items">
-        </ul>
+        <ul id="budget-items"></ul>
       </div>
 
       <section class="dashboard-main">
@@ -59,7 +61,10 @@
         </div>
       </section>
     </div>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.814.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../utils/amazon-cognito-identity.min.js"
+    ></script>
     <script src="scripts.js"></script>
   </body>
 </html>

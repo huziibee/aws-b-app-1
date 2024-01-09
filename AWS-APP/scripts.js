@@ -19,13 +19,13 @@ function loginUser(name, password) {
     });
 
     cognitoUser.authenticateUser(authenticationDetails, {
-        onSuccess: function(result) {
+        onSuccess: function (result) {
             console.log('User login successful:', result);
             sessionStorage.setItem('username', name);
             window.location.href = '../Dashboard/dashboard.html';
 
         },
-        onFailure: function(err) {
+        onFailure: function (err) {
             console.error('User login failed:', err);
             alert(err.message || JSON.stringify(err));
         },
@@ -33,7 +33,7 @@ function loginUser(name, password) {
 }
 
 
-document.getElementById('login-form').addEventListener('submit', function(event){
+document.getElementById('login-form').addEventListener('submit', function (event) {
     event.preventDefault();
     // Here you would validate the user's credentials
     // For demonstration, we'll just redirect

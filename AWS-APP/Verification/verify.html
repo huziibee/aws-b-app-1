@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verify OTP</title>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
     <div class="opt-container">
-        <form id="otp-form">
-            <h2>OTP Verification</h2>
-            <input type="text" id="otp-code" placeholder="Enter OTP" required>
-            <button class="formbtn" type="submit">Verify</button>
-            
-        </form>
+      <form id="otp-form">
+        <h2>OTP Verification</h2>
+        <input type="text" id="otp-code" placeholder="Enter OTP" required />
+        <button class="formbtn" type="submit">Verify</button>
+      </form>
     </div>
-    <script type="text/javascript" src="../utils/amazon-cognito-identity.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../utils/amazon-cognito-identity.min.js"
+    ></script>
     <script src="verify.js"></script>
-</body>
+  </body>
 </html>
